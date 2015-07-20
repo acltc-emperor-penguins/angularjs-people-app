@@ -21,8 +21,7 @@
       bioVisible: false
     }];
 
-    $scope.toggleBio = function(index) {
-      var person = $scope.people[index];
+    $scope.toggleBio = function(person) {
       person.bioVisible = !person.bioVisible;
     };
 
