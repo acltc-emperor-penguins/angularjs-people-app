@@ -7,6 +7,7 @@
     <div ng-repeat="person in people">
       <h2 ng-click="toggleBio(person)">{{ person.name }}</h2>
       <h3 ng-show="person.bioVisible">{{ person.bio }}</h3>
+      <a href="#" ng-click="deletePerson($index)">Delete</a>
     </div>
     <div>
       Name: <input ng-model="newPersonName">

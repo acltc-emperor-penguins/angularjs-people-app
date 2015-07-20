@@ -34,6 +34,10 @@
       $scope.people.push(person);
     };
 
+    $scope.deletePerson = function(index) {
+      $scope.people.splice(index, 1);
+    };
+
     window.scope = $scope;
   });
 
