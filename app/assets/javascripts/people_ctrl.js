@@ -21,6 +21,11 @@
         bio: bio,
         bioVisible: false
       };
+
+      $http.post('/api/v1/people.json', person).then(function(response){
+        
+      });
+
       $scope.people.push(person);
     };
 
