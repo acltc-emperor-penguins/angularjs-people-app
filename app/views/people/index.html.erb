@@ -9,6 +9,9 @@
       <h3 ng-if="person.bioVisible">{{ person.bio }}</h3>
       <a href="#" ng-click="deletePerson($index)">Delete</a>
     </div>
+    <ul id="errors">
+      <li ng-repeat="error in errors">{{ error }}</li>
+    </ul>
     <div>
       Name: <input ng-model="newPersonName">
       Bio: <input ng-model="newPersonBio">

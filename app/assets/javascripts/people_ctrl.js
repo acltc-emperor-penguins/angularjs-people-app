@@ -25,7 +25,7 @@
       $http.post('/api/v1/people.json', person).then(function(response){
         $scope.people.push(person);
       }, function(error) {
-        console.log(error);
+        $scope.errors = error.data.errors;
       });
 
     };
