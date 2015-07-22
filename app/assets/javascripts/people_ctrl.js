@@ -23,10 +23,9 @@
       };
 
       $http.post('/api/v1/people.json', person).then(function(response){
-        
+        $scope.people.push(person);
       });
 
-      $scope.people.push(person);
     };
 
     $scope.deletePerson = function(index) {
