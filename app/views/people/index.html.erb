@@ -4,7 +4,7 @@
     <div>
       <h4>Total number of people: {{ people.length }}</h4>
     </div>
-    <div ng-repeat="person in people">
+    <div ng-repeat="person in people | filter: {name: 'George'}">
       <h2 ng-click="toggleBio(person)">{{ person.name }}</h2>
       <h3 ng-if="person.bioVisible">{{ person.bio }}</h3>
       <a href="#" ng-click="deletePerson($index)">Delete</a>
