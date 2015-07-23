@@ -30,7 +30,8 @@
 
     };
 
-    $scope.deletePerson = function(index) {
+    $scope.deletePerson = function(person) {
+      var index = $scope.people.indexOf(person);
       $scope.people.splice(index, 1);
     };
 
@@ -40,7 +41,7 @@
       } else {
         $scope.descending = !$scope.descending;
       }
-      
+
       $scope.orderAttribute = attribute;
     };
 
