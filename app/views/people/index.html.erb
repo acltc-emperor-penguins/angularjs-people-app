@@ -5,11 +5,7 @@
       <h4>Total number of people: {{ people.length }}</h4>
     </div>
     <input ng-model="nameFilter">
-    <div>
-      <button ng-click="toggleOrder('name')">Order by name</button>
-      <button ng-click="toggleOrder('bio')">Order by bio</button>
-    </div>
-    <div ng-repeat="person in people | filter: {name: nameFilter} | orderBy:orderAttribute:descending">
+    <div ng-repeat="person in people | filter: {name: nameFilter}">
       <h2 ng-click="toggleBio(person)">{{ person.name }}</h2>
       <h3 ng-if="person.bioVisible">{{ person.bio }}</h3>
       <a href="#" ng-click="deletePerson(person)">Delete</a>
