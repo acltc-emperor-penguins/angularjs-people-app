@@ -7,7 +7,19 @@
       $http.get("/api/v1/people.json").then(function(response) {
         $scope.people = response.data;
       });
+
+      $scope.orderAttribute = 'name';
     }
+
+    $scope.sortBy = function(attribute) {
+      if(attribute != $scope.orderAttribute) {
+        $scope.descending = false;
+        } else {
+          $scope.descending = !$scope.descending;
+        }
+      
+      $scope.orderAttribute = attribute;
+    };
     
     
 
