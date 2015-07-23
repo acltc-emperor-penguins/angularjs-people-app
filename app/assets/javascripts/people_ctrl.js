@@ -34,6 +34,10 @@
       $scope.people.splice(index, 1);
     };
 
+    $scope.toggleOrder = function(attribute) {
+      $scope.orderAttribute = attribute;
+    };
+
     window.scope = $scope;
   });
 
