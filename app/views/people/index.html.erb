@@ -4,7 +4,12 @@
     <div>
       <h4>Total number of people: {{ people.length }}</h4>
     </div>
-    <input ng-model="nameFilter">
+    <input ng-model="nameFilter" list="names">
+
+    <datalist id="names">
+      <option ng-repeat="person in people">{{ person.name }}</option>
+    </datalist>
+
     <div>
       <button ng-click="sortBy('name')">Order by name</button>
       <button ng-click="sortBy('bio')">Order by bio</button>
